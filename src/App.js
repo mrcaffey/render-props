@@ -1,8 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Tracker from './Tracker';
+import Square from './Square';
+import Circle from './Circle';
 
 const App = () => (
-  <Tracker />
+  <Tracker>
+    { (data) => (
+      <>
+      <Square data={data} />
+      <Circle data={data} />
+      </>
+      )
+    }
+  </Tracker>
 )
 
 
